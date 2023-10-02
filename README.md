@@ -5,3 +5,8 @@ Cíle projektu:
   <li>Naučit se pracovat v prostředí unity3D</li>
   <li>Pokusit se o propojení arduina a unity</li>
 </ul>
+
+<h2>Zdroje informací pro projekt</h2>
+<ul>
+  <li>Aldous-Broderův algoritmus pro generování bludiště - https://en.wikipedia.org/wiki/Maze_generation_algorithm#Aldous-Broder_algorithm</li>
+</ul>
