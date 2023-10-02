@@ -10,3 +10,7 @@ Cíle projektu:
 <ul>
   <li>Aldous-Broderův algoritmus pro generování bludiště - https://en.wikipedia.org/wiki/Maze_generation_algorithm#Aldous-Broder_algorithm</li>
 </ul>
+
+<h2>Ostatní zdroje</h2>
+<p>https://assetstore.unity.com/packages/3d/environments/dungeons/low-poly-dungeons-lite-177937</p>
+<p>https://assetstore.unity.com/packages/3d/environments/dungeons/lowpoly-dungeon-assets-117330</p>
