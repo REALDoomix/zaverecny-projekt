@@ -1,19 +1,15 @@
-<h1>Závěrečný projekt</h1>
+# Závěrečný projekt
 Cíle projektu: 
-<ul>
-  <li>Naučit se jazyk c# na dostačující úrovni</li>
-  <li>Naučit se pracovat v prostředí unity3D</li>
-  <li>Pokusit se o propojení arduina a unity</li>
-</ul>
+  - Naučit se jazyk c# na dostačující úrovni
+  - Naučit se pracovat v prostředí unity3D
+  - Pokusit se o propojení arduina a unity
 
-<h2>Zdroje informací pro projekt</h2>
-<ul>
-  <li>[Aldous-Broderův algoritmus] pro generování bludiště</li>
-</ul>
+## Zdroje informací pro projekt
+  - [Aldous-Broderův algoritmus] pro generování bludiště
 
-<h2>Ostatní zdroje</h2>
-<p>https://assetstore.unity.com/packages/3d/environments/dungeons/low-poly-dungeons-lite-177937</p>
-<p>https://assetstore.unity.com/packages/3d/environments/dungeons/lowpoly-dungeon-assets-117330</p>
+## Ostatní zdroje
+- [Assety stěn a objektů]
 
 
 [Aldous-Broderův algoritmus]:https://en.wikipedia.org/wiki/Maze_generation_algorithm#Aldous-Broder_algorithm
+[Assety stěn a objektů]:https://assetstore.unity.com/packages/3d/environments/dungeons/low-poly-dungeons-lite-177937
