@@ -7,10 +7,11 @@ public class MazeGenerator : MonoBehaviour
     [SerializeField] MazeNode nodePrefab;
     [SerializeField] Vector2Int mazeSize;
 
+
     private void Start()
     {
-        GenerateMazeInstant(mazeSize);
-        //StartCoroutine(GenerateMaze(mazeSize));
+        //GenerateMazeInstant(mazeSize);
+        StartCoroutine(GenerateMaze(mazeSize));
     }
 
     void GenerateMazeInstant(Vector2Int size)
