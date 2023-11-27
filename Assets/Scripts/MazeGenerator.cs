@@ -10,8 +10,8 @@ public class MazeGenerator : MonoBehaviour
 
     private void Start()
     {
-        //GenerateMazeInstant(mazeSize);
-        StartCoroutine(GenerateMaze(mazeSize));
+        GenerateMazeInstant(mazeSize);
+        //StartCoroutine(GenerateMaze(mazeSize));
     }
 
     void GenerateMazeInstant(Vector2Int size)

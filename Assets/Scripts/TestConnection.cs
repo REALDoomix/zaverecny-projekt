@@ -1,11 +1,11 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using System.IO.Ports;
 
+
 public class TestConnection : MonoBehaviour
 {
-    SerialPort data_stream = new SerialPort("COM6", 9600);
+    SerialPort data_stream = new SerialPort("COM5", 9600);
     public string receivedString;
     public GameObject test_data;
     public Rigidbody rb;
