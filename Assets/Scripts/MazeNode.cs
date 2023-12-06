@@ -6,7 +6,8 @@ public enum NodeState
 {
     Available,
     Current,
-    Completed
+    Completed,
+    Finish
 }
 
 public class MazeNode : MonoBehaviour
@@ -30,6 +31,9 @@ public class MazeNode : MonoBehaviour
                 floor.material.color = Color.yellow;
                 break;
             case NodeState.Completed:
+                floor.material.color = Color.blue;
+                break;
+            case NodeState.Finish:
                 floor.material.color = Color.blue;
                 break;
         }

@@ -5,6 +5,7 @@ using UnityEngine;
 public class MazeGenerator : MonoBehaviour
 {
     [SerializeField] MazeNode nodePrefab;
+    [SerializeField] GameObject objectPrefab;
     [SerializeField] Vector2Int mazeSize;
 
 
@@ -122,9 +123,19 @@ public class MazeGenerator : MonoBehaviour
             }
 
         }
+        // Choose a random completed node to place the object
+        MazeNode randomCompletedNode = completedNodes[Random.Range(0, completedNodes.Count)];
+        // Change the color of the chosen node for better visibility of the finish node
+        randomCompletedNode.SetState(NodeState.Finish);
+        // Instantiate the object prefab at the position of the chosen node with chosen rotation and offset
+        Quaternion rotation = Quaternion.Euler(0, 180, 0);
+        Vector3 finishPosition = randomCompletedNode.transform.position + new Vector3(0, 10, 0);
+        
+        Instantiate(objectPrefab, finishPosition, rotation);
     }
 
 
+/*
      IEnumerator GenerateMaze(Vector2Int size)
     {
         List<MazeNode> nodes = new List<MazeNode>();
@@ -239,4 +250,5 @@ public class MazeGenerator : MonoBehaviour
             yield return new WaitForSeconds(0.05f);
         }
     }
+    */
 }
