@@ -5,7 +5,7 @@ Cíle projektu:
   - Pokusit se o propojení arduina a unity
 
 ## Zdroje informací pro projekt
-  - [Algoritmus pro generování náhodného bludiště] pro generování bludiště
+  - [Algoritmus pro generování náhodného bludiště]
 
 ## Ostatní zdroje
 - [Assety stěn a objektů]
