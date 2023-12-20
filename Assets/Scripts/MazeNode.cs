@@ -7,35 +7,44 @@ public enum NodeState
     Available,
     Current,
     Completed,
-    Finish
+    Finish,
+    Obstacle
 }
 
 public class MazeNode : MonoBehaviour
 {
     [SerializeField] GameObject[] walls;
-    [SerializeField] MeshRenderer floor;
+    [SerializeField] GameObject floor;
+    [SerializeField] MeshRenderer floorWithHole;
 
     public void RemoveWall(int wallToRemove)
     {
         walls[wallToRemove].gameObject.SetActive(false);
     }
 
+    
     public void SetState(NodeState state)
     {
+
+        
+
         switch (state)
         {
             case NodeState.Available:
-                floor.material.color = Color.white;
+                floor.GetComponent<MeshRenderer>().material.color = Color.white;
                 break;
             case NodeState.Current:
-                floor.material.color = Color.yellow;
+                floor.GetComponent<MeshRenderer>().material.color = Color.yellow;
                 break;
             case NodeState.Completed:
-                floor.material.color = Color.blue;
+                floor.GetComponent<MeshRenderer>().material.color = Color.blue;
                 break;
             case NodeState.Finish:
-                floor.material.color = Color.blue;
+                floor.GetComponent<MeshRenderer>().material.color = Color.blue;
                 break;
+            case NodeState.Obstacle:
+                    floor.gameObject.SetActive(false);
+                    break;
         }
     }
 }

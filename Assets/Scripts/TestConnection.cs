@@ -5,7 +5,7 @@ using System.IO.Ports;
 
 public class TestConnection : MonoBehaviour
 {
-    SerialPort data_stream = new SerialPort("COM3", 9600);
+    SerialPort data_stream = new SerialPort("COM5", 9600);
     public string receivedString;
     public GameObject test_data;
     public Rigidbody rb;
