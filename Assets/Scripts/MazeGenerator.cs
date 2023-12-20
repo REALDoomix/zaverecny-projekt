@@ -14,9 +14,6 @@ public class MazeGenerator : MonoBehaviour
         GenerateMazeInstant(mazeSize);
     }
 
-    void randomObstacle(){
-        
-    }
 
     void GenerateMazeInstant(Vector2Int size)
     {
@@ -44,22 +41,22 @@ public class MazeGenerator : MonoBehaviour
             List<int> possibleNextNodes = new List<int>();
             List<int> possibleDirections = new List<int>();
 
-            int currentNodeIndex = nodes.IndexOf(currentPath[currentPath.Count -1]);
+            int currentNodeIndex = nodes.IndexOf(currentPath[currentPath.Count - 1]);
             int currentNodeX = currentNodeIndex / size.y;
             int currentNodeY = currentNodeIndex % size.y;
 
             // Check the position of the current node and pick next possible direction and nodes
             // Next moves - 1 = positiveX | 2 = negativeX | 3 = positiveY | 4 = negativeY
 
-            if(currentNodeX < size.x - 1)
+            if (currentNodeX < size.x - 1)
             {
                 // Check node to the right of the current node
-                if (!completedNodes.Contains(nodes[currentNodeIndex + size.y])&& !currentPath.Contains(nodes[currentNodeIndex + size.y]))
+                if (!completedNodes.Contains(nodes[currentNodeIndex + size.y]) && !currentPath.Contains(nodes[currentNodeIndex + size.y]))
                 {
                     possibleDirections.Add(1);
                     possibleNextNodes.Add(currentNodeIndex + size.y);
                 }
-            }    
+            }
 
             if (currentNodeX > 0)
             {
@@ -70,7 +67,7 @@ public class MazeGenerator : MonoBehaviour
                     possibleNextNodes.Add(currentNodeIndex - size.y);
                 }
             }
-            
+
             if (currentNodeY < size.y - 1)
             {
                 //Check node above the current node
@@ -120,14 +117,14 @@ public class MazeGenerator : MonoBehaviour
                 int rnd = ran.Next(0, 100);
                 if(rnd > 50 && ){
                 chosenNode.SetState(NodeState.Obstacle);*/
-                
+
                 currentPath.Add(chosenNode);
             }
 
             else
             {
                 completedNodes.Add(currentPath[currentPath.Count - 1]);
-                currentPath.RemoveAt(currentPath.Count -1);
+                currentPath.RemoveAt(currentPath.Count - 1);
             }
 
         }
@@ -139,13 +136,15 @@ public class MazeGenerator : MonoBehaviour
         Quaternion rotation = Quaternion.Euler(0, 180, 0);
         Vector3 finishPosition = randomCompletedNodeFinish.transform.position + new Vector3(0, 10, 0);
         Instantiate(objectPrefab, finishPosition, rotation);
-        
-        for(int i = 0; i<30; i++){
+
+        for (int i = 0; i < (size.x / 2); i++)
+        {
             MazeNode randomCompletedNode = completedNodes[Random.Range(0, completedNodes.Count)];
-            if(randomCompletedNode != randomCompletedNodeFinish){
+            if (randomCompletedNode != randomCompletedNodeFinish)
+            {
                 randomCompletedNode.SetState(NodeState.Obstacle);
             }
-        
+
         }
     }
 }
