@@ -131,8 +131,19 @@ public class MazeGenerator : MonoBehaviour
             }
 
         }
-        // Choose a random completed node to place the object
+
         MazeNode randomCompletedNodeFinish = completedNodes[Random.Range(0, completedNodes.Count)];
+
+        // Calculate the distance between the object's position and Vector3.ZERO
+        float distanceToZero = Vector3.Distance(randomCompletedNodeFinish.transform.position, Vector3.zero);
+
+        // Choose a random completed node to place the object as long as it's at least 3 units away from Vector3.ZERO
+        while(distanceToZero < 3){
+            randomCompletedNodeFinish = completedNodes[Random.Range(0, completedNodes.Count)];
+
+            distanceToZero = Vector3.Distance(randomCompletedNodeFinish.transform.position, Vector3.zero);
+        }   
+
         // Change the color of the chosen node for better visibility of the finish node
         randomCompletedNodeFinish.SetState(NodeState.Finish);
         // Instantiate the object prefab at the position of the chosen node with chosen rotation and offset
@@ -140,11 +151,10 @@ public class MazeGenerator : MonoBehaviour
         Vector3 finishPosition = randomCompletedNodeFinish.transform.position + new Vector3(0, 10, 0);
         Instantiate(objectPrefab, finishPosition, rotation);
         
-
+        //Randomly generate obstacles throughout the maze so that 1 10th of the maze is an obstacle
         for(int i = 0; i<(size.x * size.y / 10); i++){
             MazeNode randomCompletedNode = completedNodes[Random.Range(0, completedNodes.Count)];
-            if(randomCompletedNode.transform.position != randomCompletedNodeFinish.transform.position && randomCompletedNode.transform.position != new Vector3(0, 0, 0)){
-                Debug.Log(randomCompletedNodeFinish.transform.position + "   " + randomCompletedNode.transform.position);
+            if(randomCompletedNode.transform.position != randomCompletedNodeFinish.transform.position && randomCompletedNode.transform.position != Vector3.zero){
                 randomCompletedNode.SetState(NodeState.Obstacle);
             }
         

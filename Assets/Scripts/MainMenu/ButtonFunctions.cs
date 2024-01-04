@@ -25,4 +25,8 @@ public class ButtonFunctions : MonoBehaviour
         PlayerPrefs.SetInt("size", 20);
         SceneManager.LoadScene("Game");
     }
+
+    public void BackToMenu(){
+        SceneManager.LoadScene("MainMenu");
+    }
 }
