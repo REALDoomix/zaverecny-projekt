@@ -2,6 +2,7 @@
 /[Ll]ibrary/
 /[Bb]uild/
 /[Oo]bj/
+/.plastic/
 *.tmp
 *.user
 *.userprefs
