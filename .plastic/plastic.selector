@@ -1,4 +1,0 @@
-repository "zaverecny-projekt@DoomixCZE@cloud"
-  path "/"
-    br "/main"
-    co "/main"
