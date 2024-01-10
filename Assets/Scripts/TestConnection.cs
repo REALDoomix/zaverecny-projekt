@@ -20,13 +20,14 @@ public class TestConnection : MonoBehaviour
 
     void Start()
     {
+        // list all serial ports
         ports = SerialPort.GetPortNames();
     for (int i = 0; i < ports.Length; i++)
         {
             portName = ports[i];
             data_stream = new SerialPort(portName, 9600);
             Debug.Log(portName);
-
+            // open port that got found
             try
             {
                 data_stream.Open();
@@ -48,11 +49,11 @@ public class TestConnection : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        // if data_stream has data and data_stream is open (meaning we found a working arduino port)
         if (data_stream != null && data_stream.IsOpen)
         {
+            //read arduino data
         receivedString = data_stream.ReadLine();
-        
-
         string[] datas = receivedString.Split(','); //split the data between ','
         rb.AddForce(0, 0, float.Parse(datas[1]) * sensitivity * Time.deltaTime, ForceMode.VelocityChange);
         rb.AddForce(float.Parse(datas[0]) * sensitivity * Time.deltaTime, 0, 0, ForceMode.VelocityChange);
