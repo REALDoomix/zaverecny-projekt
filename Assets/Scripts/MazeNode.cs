@@ -4,9 +4,6 @@ using UnityEngine;
 
 public enum NodeState
 {
-    Available,
-    Current,
-    Completed,
     Finish,
     Obstacle
 }
