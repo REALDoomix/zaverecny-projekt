@@ -33,8 +33,8 @@ public class MazeNode : MonoBehaviour
                 this.gameObject.tag = "Finish";
                 break;
             case NodeState.Obstacle:
-                    floor.gameObject.SetActive(false);
-                    break;
+                floor.gameObject.SetActive(false);
+                break;
         }
     }
 }
