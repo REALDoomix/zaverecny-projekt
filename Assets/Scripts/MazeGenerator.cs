@@ -106,7 +106,6 @@ public class MazeGenerator : MonoBehaviour
                     case 1:
                         chosenNode.RemoveWall(1);
                         currentPath[currentPath.Count - 1].RemoveWall(0);
-
                         break;
                     case 2:
                         chosenNode.RemoveWall(0);
