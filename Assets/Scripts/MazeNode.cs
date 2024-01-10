@@ -22,9 +22,6 @@ public class MazeNode : MonoBehaviour
     
     public void SetState(NodeState state)
     {
-
-        
-
         switch (state)
         {
             case NodeState.Finish:
