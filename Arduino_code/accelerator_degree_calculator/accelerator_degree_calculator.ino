@@ -1,12 +1,8 @@
-// Watch video here: https://www.youtube.com/watch?v=y4b-FcmOGV0
-
-// Output for viewing with Serial Oscilloscope: accX,accY,magZ // gyrX, gyrY and gyrZ are commented out
-
 /*
-Arduino     MARG GY-85
+Arduino        GY-85
   A5            SCL
   A4            SDA
-  3.3V          VCC
+  3.3V          3.3V
   GND           GND
 */
 
