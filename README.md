@@ -1,4 +1,4 @@
-# Závěrečný projekt - kuličkové bludiště
+# Závěrečný projekt - MazeRoller
 Cíle projektu: 
   - Naučit se jazyk c# na dostačující úrovni
   - Naučit se pracovat v prostředí unity3D
