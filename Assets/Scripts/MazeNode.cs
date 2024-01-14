@@ -4,6 +4,9 @@ using UnityEngine;
 
 public enum NodeState
 {
+    Available,
+    Current,
+    Completed,
     Finish,
     Obstacle
 }
@@ -32,6 +35,16 @@ public class MazeNode : MonoBehaviour
             case NodeState.Obstacle:
                 floor.gameObject.SetActive(false);
                 break;
+            case NodeState.Available:
+                floor.GetComponent<MeshRenderer>().material.color = Color.white;
+                break;
+            case NodeState.Current:
+                floor.GetComponent<MeshRenderer>().material.color = Color.yellow;
+                break;
+            case NodeState.Completed:
+                floor.GetComponent<MeshRenderer>().material.color = Color.blue;
+                break;
+            
         }
     }
 }

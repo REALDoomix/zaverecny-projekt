@@ -20,14 +20,10 @@ public class TestConnection : MonoBehaviour
 
     void Start()
     {
-        // list all serial ports
-        ports = SerialPort.GetPortNames();
-    for (int i = 0; i < ports.Length; i++)
+    for (int i = 1; i < 10; i++)
         {
             portName = ports[i];
-            data_stream = new SerialPort(portName, 9600);
-            Debug.Log(portName);
-            // open port that got found
+            data_stream = new SerialPort("COM" + i, 9600);
             try
             {
                 data_stream.Open();
