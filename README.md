@@ -8,10 +8,13 @@ Cíle projektu:
 
 ## Zdroje informací pro projekt
   - [Algoritmus pro generování náhodného bludiště]
+  - [Arduino forum]
+  - [C# Reference]
+  - [Arduino stack exchange]
+  - [Copilot tvurce obrazku]
 
-## Ostatní zdroje
-- [Assety stěn a objektů]
-
-
-[Algoritmus pro generování náhodného bludiště]:https://www.youtube.com/watch?v=OutlTTOm17M
-[Assety stěn a objektů]:https://assetstore.unity.com/packages/3d/environments/dungeons/low-poly-dungeons-lite-177937
+[Algoritmus pro generování náhodného bludiště]:https://en.wikipedia.org/wiki/Depth-first_search
+[Arduino forum]:https://forum.arduino.cc/
+[C# Reference]:https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/
+[Arduino stack exchange]:https://arduino.stackexchange.com/
+[Copilot tvurce obrazku]:https://copilot.microsoft.com/images/create
